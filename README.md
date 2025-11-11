@@ -31,6 +31,19 @@ bmad-workspace/
 
 ## 🚀 Quick Start
 
+### Clone and Setup
+```bash
+# Clone the repository
+git clone https://github.com/proton4444/bmad-workspace.git
+cd bmad-workspace
+
+# Install git hooks (IMPORTANT - run this first!)
+bash setup-hooks.sh
+
+# Verify installation
+git status
+```
+
 ### Check Workspace Status
 ```bash
 make status
