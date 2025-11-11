@@ -1,0 +1,75 @@
+# BMAD Workspace .gitignore
+
+# Temporary files
+.temp/
+output/
+*.tmp
+*.temp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Project outputs (all projects)
+projects/*/outputs/
+projects/*/logs/
+projects/*/__pycache__/
+projects/*/*.pyc
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Logs
+*.log
+logs/
+
+# API keys and credentials (extra safety)
+*apikey*
+*api_key*
+*secret*
+
+# Claude Code temp files
+.claude/cache/
+
+# Test outputs
+pytest_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Makefile temp files
+*.d
