@@ -1,264 +1,403 @@
-# START HERE TOMORROW
+# START HERE TOMORROW 🚀
 
-## Quick Status Check
+**Project**: multi-agent-mvp  
+**Phase**: 3 (Implementation)  
+**Current Epic**: 1 - Task Dependency Engine  
+**Current Story**: 1.2 - Topological Sort (DRAFTED)  
+**Last Updated**: 2025-11-12
 
-Run this first to verify everything is working:
+---
+
+## ⚡ Quick Status Check
+
+Run this **first** to verify everything is working:
 
 ```bash
 cd C:\knosso\Bmad\projects\multi-agent-mvp
 pytest tests/ -v --tb=short 2>&1 | tail -20
 ```
 
-**Expected Result:** `465 passed in ~2.5s` ✅
+**Expected Result**: `✅ 465 passed in ~2.5s`
 
-## What We've Built
+If tests fail, check:
+1. Dependencies: `pip install -r requirements.txt`
+2. Python version: `python --version` (need 3.11+)
+3. Working directory: Must be in project root
 
-### Completed Enhancements (6 Total)
+---
 
-1. ✅ **Epic 1: Task Dependency Engine** (133 tests)
-   - Topological sorting, cycle detection, ready tasks
+## 📊 Where We Are (Phase 3 Status)
 
-2. ✅ **Epic 2: Agent Personality System** (109 tests)
-   - 3 agent archetypes: Athena, Cato, Zephyr
-   - Affinity-based task selection
+### Development Progress
 
-3. ✅ **Epic 3: Collaborative Creativity** (86 tests)
-   - Brainstorming, synthesis, evaluation, memory
+| Epic | Status | Stories Complete | Next Story |
+|------|--------|------------------|------------|
+| **Epic 1** | 🔄 IN PROGRESS | 1/5 (20%) | Story 1.2 |
+| **Epic 2** | 📭 BACKLOG | 0/4 | Story 2.1 |
+| **Epic 3** | 📭 BACKLOG | 0/5 | Story 3.1 |
+| **Epic 4** | 📭 BACKLOG | 0/4 | Story 4.1 |
 
-4. ✅ **Epic 4: Workflow Integration & Validation** (69 tests)
-   - End-to-end orchestration, performance benchmarking, real-world scenarios
+### Epic 1: Task Dependency Engine
 
-5. ✅ **Persistence Layer** (32 tests)
-   - Save/load workflows to disk with versioning
-   - Batch operations, validation
+- ✅ **Story 1.1**: Cycle Detection → **DONE**
+- 📋 **Story 1.2**: Topological Sort (Kahn's Algorithm) → **DRAFTED** ← **YOU ARE HERE**
+- 📭 **Story 1.3**: Ready Task Identification → BACKLOG
+- 📭 **Story 1.4**: Conditional Branching → BACKLOG
+- 📭 **Story 1.5**: Load Testing → BACKLOG
 
-6. ✅ **Web API** (36 tests)
-   - 25 REST endpoints with FastAPI
-   - Workflow management, execution, persistence
+**Detailed status**: `.temp/sprint-status.yaml`
 
-### Project Stats
+---
 
-- **Total Tests**: 465 passing
-- **Total Modules**: 50+ Python files
-- **Lines of Code**: 5,000+
-- **Documentation**: Comprehensive
-- **Performance**: <1s for 10 tasks, <5s for 50 tasks
+## 🎯 What To Do Next
 
-## Key Files
+### Option 1: Continue Story 1.2 (Recommended)
 
-### Core Implementation
+**Story**: Implement Topological Sort (Kahn's Algorithm)
+
+**BMAD Workflow**:
+```bash
+# Step 1: Generate story context
+/bmad:bmm:workflows:story-context
+
+# Step 2: Implement the story
+/bmad:bmm:workflows:dev-story
+
+# Step 3: Mark story done when complete
+/bmad:bmm:workflows:story-done
 ```
-src/
-├── core/                      # Task dependency engine
-│   ├── topological_sort.py
-│   ├── ready_tasks.py
-│   └── conditional_branching.py
-├── agents/                    # Agent system
-│   ├── personality.py
-│   ├── affinity.py
-│   ├── state.py
-│   └── agency.py
-├── collaboration/             # Collaborative features
-│   ├── context.py
-│   ├── brainstorming.py
-│   ├── synthesis.py
-│   ├── evaluation.py
-│   └── memory.py
-├── orchestration/
-│   └── workflow.py           # Main orchestrator
-├── persistence/
-│   └── workflow_storage.py   # Save/load workflows
-├── benchmarks/
-│   └── performance.py        # Performance testing
-├── scenarios/
-│   └── real_world.py         # Real-world examples
-└── api/
-    └── app.py                # REST API (650+ lines)
+
+**What This Does**:
+- Reads story requirements from `.temp/stories/1-2-topological-sort.md`
+- Generates technical context from PRD + Architecture
+- Guides implementation with acceptance criteria
+- Updates sprint status automatically
+
+### Option 2: Check Current Status
+
+```bash
+# Check detailed story status
+/bmad:bmm:workflows:workflow-status
+
+# Or manually view
+cat .temp/sprint-status.yaml
 ```
+
+### Option 3: Review Story Details
+
+```bash
+# If story file exists
+cat .temp/stories/1-2-topological-sort.md
+
+# If not, create it first with
+/bmad:bmm:workflows:create-story
+```
+
+---
+
+## 📁 Key Files & Locations
 
 ### Documentation
 ```
-docs/
-├── ARCHITECTURE.md           # System design
-├── API_GUIDE.md             # REST API reference
-├── TUTORIAL.md              # Step-by-step guide
-└── API_REFERENCE.md         # API details
+README.md                      # Project overview (updated 2025-11-12)
+STARTFROMHERETOMORROW.md      # This file - daily guidance
+docs/ARCHITECTURE.md          # System design decisions
+docs/API_GUIDE.md            # REST API reference
+docs/TUTORIAL.md             # Step-by-step examples
+```
 
-README.md                     # Project overview
-API_QUICKSTART.md            # Quick start
-PERSISTENCE_SUMMARY.md       # Persistence details
-PROJECT_COMPLETION_SUMMARY.md # Final stats
+### Status Tracking
+```
+.temp/sprint-status.yaml      # Current sprint & story status
+output/bmm-workflow-status.yaml  # Phase 0-4 progress
+output/PRD.md                 # Product requirements
+output/epics.md               # Epic breakdown
+```
+
+### Story Files
+```
+.temp/stories/                # Story markdown files
+├── 1-1-cycle-detection.md   # ✅ DONE
+├── 1-2-topological-sort.md  # 📋 DRAFTED (if created)
+└── ...
+```
+
+### Source Code
+```
+src/
+├── core/                     # Epic 1: Task engine
+│   ├── topological_sort.py  # ← Story 1.2 implements this
+│   ├── ready_tasks.py
+│   └── conditional_branching.py
+├── agents/                   # Epic 2: Agent system
+├── collaboration/            # Epic 3: Creativity
+├── orchestration/            # Epic 4: Workflow
+├── persistence/              # Storage layer
+└── api/                      # REST API (FastAPI)
 ```
 
 ### Tests
 ```
-tests/                        # 465 tests total
-├── test_api.py             # 36 API tests
-├── test_persistence.py      # 32 persistence tests
-├── test_workflow_orchestration.py  # 23 tests
-├── test_performance_benchmarks.py  # 20 tests
-├── test_scenarios.py        # 26 tests
-├── test_agents.py           # Many agent tests
-├── test_brainstorming.py    # Brainstorming tests
-├── test_synthesis_evaluation_memory.py  # 56 tests
-├── test_topological_sort.py # 36 tests
-└── test_stress_engine.py    # 30 tests
+tests/
+├── test_topological_sort.py  # ← Story 1.2 tests here
+├── test_agents.py
+├── test_workflow_orchestration.py
+└── test_api.py
 ```
 
-## Running the System
+---
 
-### Run All Tests
+## 🔄 BMAD Method Workflow (Detailed)
+
+### Story Development Cycle
+
+```mermaid
+Story (DRAFTED)
+    ↓
+Generate Context (/bmad:bmm:workflows:story-context)
+    ↓
+Story (READY-FOR-DEV)
+    ↓
+Implement (/bmad:bmm:workflows:dev-story)
+    ↓
+Story (IN-PROGRESS)
+    ↓
+Tests Pass + AC Met
+    ↓
+Code Review (/bmad:bmm:workflows:code-review)
+    ↓
+Story (REVIEW)
+    ↓
+Mark Done (/bmad:bmm:workflows:story-done)
+    ↓
+Story (DONE)
+    ↓
+Next Story
+```
+
+### Each Story Follows These Steps:
+
+#### 1. **Story Context** (Prep Phase)
+```bash
+/bmad:bmm:workflows:story-context
+```
+- Reads PRD, Architecture, Epic tech spec
+- Generates implementation context
+- Updates story status: DRAFTED → READY-FOR-DEV
+
+#### 2. **Dev Story** (Implementation Phase)
+```bash
+/bmad:bmm:workflows:dev-story
+```
+- Reads story file with acceptance criteria
+- Implements required functionality
+- Writes/updates tests
+- Updates story status: READY-FOR-DEV → IN-PROGRESS
+
+#### 3. **Code Review** (Quality Gate)
+```bash
+/bmad:bmm:workflows:code-review
+```
+- Reviews implementation against AC
+- Checks code quality, patterns, best practices
+- Appends review notes to story file
+- Updates story status: IN-PROGRESS → REVIEW
+
+#### 4. **Story Done** (Completion)
+```bash
+/bmad:bmm:workflows:story-done
+```
+- Marks story complete
+- Updates sprint status: REVIEW → DONE
+- Advances to next story in epic
+
+---
+
+## 🧪 Testing & Validation
+
+### Run Tests Before Starting Work
 ```bash
 pytest tests/ -v
 ```
 
-### Run Specific Test Suite
+### Run Tests for Specific Epic
 ```bash
-pytest tests/test_api.py -v              # API tests only
-pytest tests/test_persistence.py -v      # Persistence tests
-pytest tests/test_workflow_orchestration.py -v  # Orchestration
+# Epic 1: Task engine
+pytest tests/test_topological_sort.py tests/test_ready_tasks.py -v
+
+# Epic 2: Agents
+pytest tests/test_agents.py tests/test_affinity.py -v
+
+# Epic 3: Collaboration
+pytest tests/test_brainstorming.py tests/test_synthesis_evaluation_memory.py -v
+
+# Epic 4: Integration
+pytest tests/test_workflow_orchestration.py tests/test_scenarios.py -v
 ```
 
-### Start Web API Server
+### Test Story Implementation
 ```bash
-python -m src.api.app
-# Server at: http://localhost:8000
-# Docs at: http://localhost:8000/docs
+# After implementing Story 1.2
+pytest tests/test_topological_sort.py -v
+
+# Expected: All tests pass
 ```
-
-### Test the API
-```bash
-# Health check
-curl http://localhost:8000/health
-
-# List agents
-curl http://localhost:8000/agents
-
-# Create workflow
-curl -X POST http://localhost:8000/workflows \
-  -H "Content-Type: application/json" \
-  -d '{
-    "workflow_id": "test",
-    "name": "Test",
-    "description": "Test workflow",
-    "task_ids": ["t1", "t2"],
-    "agent_names": ["Athena", "Cato"],
-    "problem_statement": "Test"
-  }'
-```
-
-## Next Enhancement Options
-
-When you're ready, choose ONE of these:
-
-### 1. Visualization Dashboard
-**What**: Web UI for real-time workflow visualization
-**Why**: See what's happening in your workflows visually
-**Skills**: HTML/CSS/JavaScript, frontend integration
-**Effort**: Medium (3-4 hours)
-**Tests Expected**: 20-30 new tests
-
-### 2. ML Agents
-**What**: Machine learning-powered agent decisions
-**Why**: Agents learn from past workflows
-**Skills**: ML/AI, scikit-learn or TensorFlow
-**Effort**: High (4-5 hours)
-**Tests Expected**: 25-35 new tests
-
-### 3. Advanced Synthesis
-**What**: Cross-domain idea synthesis
-**Why**: Combine ideas from different fields
-**Skills**: Graph algorithms, clustering
-**Effort**: Medium (3-4 hours)
-**Tests Expected**: 20-25 new tests
-
-### 4. Distributed Execution
-**What**: Run workflows across multiple machines
-**Why**: Scale to large workflows
-**Skills**: Async, networking, coordination
-**Effort**: High (5+ hours)
-**Tests Expected**: 30-40 new tests
-
-### 5. WebSocket Real-time Updates
-**What**: Live monitoring via WebSockets
-**Why**: See workflow progress in real-time
-**Skills**: WebSockets, async Python
-**Effort**: Medium (3-4 hours)
-**Tests Expected**: 20-25 new tests
-
-### 6. Additional Scenarios
-**What**: New domain-specific scenarios
-**Why**: Validate in more real-world contexts
-**Skills**: Domain knowledge, scenario design
-**Effort**: Low-Medium (2-3 hours per scenario)
-**Tests Expected**: 15-20 per scenario
-
-### 7. Advanced Scheduling
-**What**: Workflow scheduling and automation
-**Why**: Run workflows on schedule
-**Skills**: Scheduling libraries, cron jobs
-**Effort**: Medium (3-4 hours)
-**Tests Expected**: 20-25 new tests
-
-### 8. Performance Optimization
-**What**: Make the system faster
-**Why**: Handle larger workflows efficiently
-**Skills**: Profiling, optimization, async
-**Effort**: Medium (3-4 hours)
-**Tests Expected**: 15-20 new tests
-
-## How to Choose
-
-Ask yourself:
-- **Want visual feedback?** → Option 1 (Dashboard)
-- **Want smart agents?** → Option 2 (ML Agents)
-- **Want better ideas?** → Option 3 (Advanced Synthesis)
-- **Want to scale?** → Option 4 (Distributed) or 8 (Performance)
-- **Want live monitoring?** → Option 5 (WebSocket)
-- **Want real-world validation?** → Option 6 (Scenarios)
-- **Want automation?** → Option 7 (Scheduling)
-
-## Tomorrow's Workflow
-
-1. **Open Zed** (this project folder)
-2. **Run verification**: `pytest tests/ -v --tb=short 2>&1 | tail -20`
-3. **Confirm 465 tests pass**
-4. **Choose enhancement** (1-8 or custom)
-5. **Say the option number**
-6. **I'll create todo list and start building**
-
-## Important Notes
-
-- All work is tested and documented
-- 465 tests validate everything
-- Code is clean and maintainable
-- API server runs on port 8000
-- Workflows save to `api_workflows/` directory
-- All documentation is in `docs/` and root
-
-## Quick Reference
-
-**Project Directory**: `C:\knosso\Bmad\projects\multi-agent-mvp`
-
-**Test Command**: `pytest tests/ -v`
-
-**API Server**: `python -m src.api.app`
-
-**API Docs**: `http://localhost:8000/docs`
-
-**Status**: 465 tests passing ✅
-
-**Ready for**: Next enhancement
 
 ---
 
-## See You Tomorrow!
+## 📝 Story 1.2: Topological Sort (Next Task)
 
-When you restart:
-1. Run the test command
-2. See "465 passed" ✅
-3. Pick an enhancement (1-8)
-4. Say the number
-5. Let's build!
+### What You're Implementing
+
+**Goal**: Implement Kahn's algorithm for topological sorting of task dependencies
+
+**Files to Modify/Create**:
+- `src/core/topological_sort.py` - Main implementation
+- `tests/test_topological_sort.py` - Comprehensive tests
+
+**Acceptance Criteria** (from story file):
+1. Kahn's algorithm correctly sorts tasks with dependencies
+2. Handles DAGs (Directed Acyclic Graphs) properly
+3. Returns topologically sorted task list
+4. Detects cycles (may reuse Story 1.1 cycle detection)
+5. Performance: <1ms for 100 tasks
+6. 100% test coverage
+
+**Implementation Hints**:
+- Use queue-based approach (Kahn's algorithm)
+- Track in-degree for each node
+- Process nodes with in-degree 0
+- Update in-degrees as nodes are processed
+
+---
+
+## 🚦 Common Workflows
+
+### Starting Fresh Each Day
+
+```bash
+# 1. Check status
+/bmad:bmm:workflows:workflow-status
+
+# 2. Review current story (if exists)
+cat .temp/stories/1-2-topological-sort.md
+
+# 3. Continue or start implementation
+/bmad:bmm:workflows:dev-story
+```
+
+### If You Get Stuck
+
+```bash
+# Check detailed architecture context
+cat output/ARCHITECTURE.md
+
+# Review PRD requirements
+cat output/PRD.md
+
+# Check epic breakdown
+cat output/epics.md
+
+# View story status
+cat .temp/sprint-status.yaml
+```
+
+### Running the API Server
+
+```bash
+# Start FastAPI server
+python -m src.api.app
+
+# Test endpoints
+curl http://localhost:8000/health
+curl http://localhost:8000/agents
+
+# View API docs
+# Open: http://localhost:8000/docs
+```
+
+---
+
+## ⚠️ Important Notes
+
+### DO:
+✅ Follow BMAD workflows (`/bmad:bmm:workflows:*`)
+✅ Run tests before and after changes
+✅ Update story status using workflows
+✅ Write comprehensive tests
+✅ Follow acceptance criteria exactly
+
+### DON'T:
+❌ Skip story context generation
+❌ Manually edit sprint-status.yaml (use workflows)
+❌ Implement without reading story AC
+❌ Commit without passing tests
+❌ Move to next story before current is DONE
+
+---
+
+## 📞 Help & Resources
+
+### Documentation
+- `README.md` - Project overview
+- `docs/ARCHITECTURE.md` - System design
+- `docs/API_GUIDE.md` - REST API
+- `docs/TUTORIAL.md` - Examples
+
+### BMAD Workflows
+- `/bmad:bmm:workflows:workflow-status` - Check progress
+- `/bmad:bmm:workflows:story-context` - Prep story
+- `/bmad:bmm:workflows:dev-story` - Implement
+- `/bmad:bmm:workflows:code-review` - Review code
+- `/bmad:bmm:workflows:story-done` - Mark complete
+
+### Files to Watch
+- `.temp/sprint-status.yaml` - Story tracking
+- `output/bmm-workflow-status.yaml` - Phase tracking
+- `.temp/stories/*.md` - Story details
+
+---
+
+## 🎯 Today's Action Plan
+
+**Recommended path for today**:
+
+1. ✅ **Verify tests pass**: `pytest tests/ -v`
+2. 📋 **Check story status**: `/bmad:bmm:workflows:workflow-status`
+3. 🔄 **Generate context** (if needed): `/bmad:bmm:workflows:story-context`
+4. 💻 **Implement Story 1.2**: `/bmad:bmm:workflows:dev-story`
+5. ✅ **Verify implementation**: `pytest tests/test_topological_sort.py -v`
+6. 🏁 **Mark done**: `/bmad:bmm:workflows:story-done`
+
+**Time estimate**: 2-3 hours for Story 1.2
+
+---
+
+## 💡 Tips for Success
+
+### Development Flow
+1. Read story acceptance criteria **first**
+2. Understand requirements before coding
+3. Write tests alongside implementation
+4. Run tests frequently
+5. Follow existing code patterns
+
+### Using BMAD Workflows
+- Workflows handle status updates automatically
+- They generate proper context from docs
+- They enforce quality gates
+- Trust the process - it's systematic
+
+### Managing State
+- Sprint status is in `.temp/sprint-status.yaml`
+- Workflow status is in `output/bmm-workflow-status.yaml`
+- Story files are in `.temp/stories/`
+- All are managed by BMAD workflows
+
+---
+
+**Ready to start? Run**: `/bmad:bmm:workflows:workflow-status`
+
+**Current focus**: Story 1.2 - Topological Sort (Kahn's Algorithm)
 
 Good luck! 🚀
