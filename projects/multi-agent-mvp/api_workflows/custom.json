@@ -1,0 +1,123 @@
+{
+  "workflow_id": "persist_workflow",
+  "name": "Persistence Test",
+  "description": "Test",
+  "current_phase": "planning",
+  "tasks": {
+    "t1": {
+      "id": "t1",
+      "name": "T1",
+      "description": "Task: t1",
+      "task_type": "implementation",
+      "complexity": "moderate",
+      "dependencies": [],
+      "status": "pending",
+      "assigned_agent": null,
+      "result": null,
+      "execution_time_ms": 0.0
+    }
+  },
+  "agents": {
+    "Athena": {
+      "state": {
+        "agent_name": "Athena",
+        "personality": {
+          "name": "Athena",
+          "role": "architect",
+          "description": "Strategic designer who thinks in systems and abstractions",
+          "system_prompt": "You are the Architect, a strategic thinker and systems designer. Your role is to analyze complex problems, identify key patterns, and design elegant solutions. You think in abstractions and relationships, seeing the big picture while maintaining attention to critical details. You prefer to understand the underlying principles before diving into implementation. Your communication is clear and structured, with emphasis on tradeoffs and design decisions. You lead with questions that reveal system properties. When collaborating with others, you provide the conceptual framework within which others work. You value correctness, elegance, and long-term maintainability over quick fixes.",
+          "traits": [
+            "Systems-thinking",
+            "Pattern recognition",
+            "Strategic planning",
+            "Design-focused",
+            "Principled",
+            "Analytical"
+          ],
+          "narrative_role": "The wise guide who provides direction and understanding",
+          "task_preferences": {
+            "architecture": 0.95,
+            "design": 0.9,
+            "planning": 0.85,
+            "analysis": 0.8,
+            "review": 0.75,
+            "implementation": 0.4,
+            "testing": 0.5,
+            "creative": 0.6
+          },
+          "communication_style": "Structured, question-driven, emphasizes tradeoffs and principles",
+          "strength_areas": [
+            "System design",
+            "Pattern analysis",
+            "Strategic planning",
+            "Architecture decisions"
+          ],
+          "weakness_areas": [
+            "Quick implementation",
+            "Creative storytelling",
+            "Handling ambiguity"
+          ],
+          "decision_pattern": "Analyzes from first principles, considers long-term implications"
+        },
+        "current_task": null,
+        "current_task_start": null,
+        "task_history": [],
+        "completed_tasks": 0,
+        "failed_tasks": 0,
+        "total_execution_time_ms": 0.0,
+        "task_type_preferences": {
+          "architecture": 0.95,
+          "design": 0.9,
+          "planning": 0.85,
+          "analysis": 0.8,
+          "review": 0.75,
+          "implementation": 0.4,
+          "testing": 0.5,
+          "creative": 0.6
+        },
+        "preferred_agents_to_collaborate_with": []
+      },
+      "personality": {
+        "name": "Athena",
+        "role": "architect",
+        "traits": [
+          "Systems-thinking",
+          "Pattern recognition",
+          "Strategic planning",
+          "Design-focused",
+          "Principled",
+          "Analytical"
+        ]
+      }
+    }
+  },
+  "context": {
+    "session_id": "576d330a",
+    "topic": "Persistence Test",
+    "problem_statement": "Test",
+    "ideas": {}
+  },
+  "brainstorm_session": {
+    "session_id": "df5531cc",
+    "total_turns": 0
+  },
+  "synthesis_session": {
+    "session_id": "21e9be33",
+    "synthesis_count": 0
+  },
+  "evaluation_session": {
+    "session_id": "d56b393a",
+    "evaluation_count": 0
+  },
+  "metrics": {},
+  "created_at": "2025-11-11T21:36:48.446157",
+  "completed_at": null,
+  "_metadata": {
+    "saved_at": "2025-11-11T21:36:48.473693",
+    "version": "1.0",
+    "tags": [
+      "custom"
+    ],
+    "filename": "custom.json"
+  }
+}

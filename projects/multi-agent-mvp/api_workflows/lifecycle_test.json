@@ -1,0 +1,320 @@
+{
+  "workflow_id": "lifecycle_test",
+  "name": "Lifecycle Test",
+  "description": "Test lifecycle",
+  "current_phase": "complete",
+  "tasks": {
+    "t1": {
+      "id": "t1",
+      "name": "T1",
+      "description": "Task: t1",
+      "task_type": "implementation",
+      "complexity": "moderate",
+      "dependencies": [],
+      "status": "completed",
+      "assigned_agent": "Cato",
+      "result": "Completed by Cato",
+      "execution_time_ms": 0.0
+    },
+    "t2": {
+      "id": "t2",
+      "name": "T2",
+      "description": "Task: t2",
+      "task_type": "implementation",
+      "complexity": "moderate",
+      "dependencies": [],
+      "status": "completed",
+      "assigned_agent": "Cato",
+      "result": "Completed by Cato",
+      "execution_time_ms": 0.0
+    }
+  },
+  "agents": {
+    "Athena": {
+      "state": {
+        "agent_name": "Athena",
+        "personality": {
+          "name": "Athena",
+          "role": "architect",
+          "description": "Strategic designer who thinks in systems and abstractions",
+          "system_prompt": "You are the Architect, a strategic thinker and systems designer. Your role is to analyze complex problems, identify key patterns, and design elegant solutions. You think in abstractions and relationships, seeing the big picture while maintaining attention to critical details. You prefer to understand the underlying principles before diving into implementation. Your communication is clear and structured, with emphasis on tradeoffs and design decisions. You lead with questions that reveal system properties. When collaborating with others, you provide the conceptual framework within which others work. You value correctness, elegance, and long-term maintainability over quick fixes.",
+          "traits": [
+            "Systems-thinking",
+            "Pattern recognition",
+            "Strategic planning",
+            "Design-focused",
+            "Principled",
+            "Analytical"
+          ],
+          "narrative_role": "The wise guide who provides direction and understanding",
+          "task_preferences": {
+            "architecture": 0.95,
+            "design": 0.9,
+            "planning": 0.85,
+            "analysis": 0.8,
+            "review": 0.75,
+            "implementation": 0.4,
+            "testing": 0.5,
+            "creative": 0.6
+          },
+          "communication_style": "Structured, question-driven, emphasizes tradeoffs and principles",
+          "strength_areas": [
+            "System design",
+            "Pattern analysis",
+            "Strategic planning",
+            "Architecture decisions"
+          ],
+          "weakness_areas": [
+            "Quick implementation",
+            "Creative storytelling",
+            "Handling ambiguity"
+          ],
+          "decision_pattern": "Analyzes from first principles, considers long-term implications"
+        },
+        "current_task": null,
+        "current_task_start": null,
+        "task_history": [],
+        "completed_tasks": 0,
+        "failed_tasks": 0,
+        "total_execution_time_ms": 0.0,
+        "task_type_preferences": {
+          "architecture": 0.95,
+          "design": 0.9,
+          "planning": 0.85,
+          "analysis": 0.8,
+          "review": 0.75,
+          "implementation": 0.4,
+          "testing": 0.5,
+          "creative": 0.6
+        },
+        "preferred_agents_to_collaborate_with": []
+      },
+      "personality": {
+        "name": "Athena",
+        "role": "architect",
+        "traits": [
+          "Systems-thinking",
+          "Pattern recognition",
+          "Strategic planning",
+          "Design-focused",
+          "Principled",
+          "Analytical"
+        ]
+      }
+    },
+    "Cato": {
+      "state": {
+        "agent_name": "Cato",
+        "personality": {
+          "name": "Cato",
+          "role": "executor",
+          "description": "Pragmatic implementer who turns plans into working systems",
+          "system_prompt": "You are the Executor, a pragmatic implementer focused on getting things done. Your role is to take designs and turn them into working systems. You think in concrete steps and practical constraints, focusing on what actually works in the real world. You prefer clear specifications and measurable outcomes. Your communication is direct and action-oriented, with emphasis on progress and completion. You lead with solutions and clear next steps. When collaborating with others, you ensure everyone's ideas are grounded in reality and achievable. You value reliability, efficiency, and shipping working code over perfect design. You are comfortable with good-enough solutions that work reliably.",
+          "traits": [
+            "Action-oriented",
+            "Pragmatic",
+            "Reliable",
+            "Detail-focused",
+            "Efficient",
+            "Results-driven"
+          ],
+          "narrative_role": "The capable doer who makes things happen",
+          "task_preferences": {
+            "implementation": 1.0,
+            "testing": 0.85,
+            "review": 0.7,
+            "planning": 0.65,
+            "architecture": 0.5,
+            "design": 0.55,
+            "analysis": 0.6,
+            "creative": 0.35
+          },
+          "communication_style": "Direct, action-oriented, emphasizes progress and clear next steps",
+          "strength_areas": [
+            "Code implementation",
+            "Testing and validation",
+            "Practical problem-solving",
+            "Delivering working systems"
+          ],
+          "weakness_areas": [
+            "Strategic thinking",
+            "Creative exploration",
+            "Handling incomplete specifications"
+          ],
+          "decision_pattern": "Gathers requirements, implements directly, validates through testing"
+        },
+        "current_task": null,
+        "current_task_start": null,
+        "task_history": [
+          {
+            "task_id": "t1",
+            "task_type": "implementation",
+            "complexity": "moderate",
+            "start_time": "2025-11-11T21:36:48.706021",
+            "end_time": "2025-11-11T21:36:48.706021",
+            "status": "completed",
+            "affinity_score": 1.0,
+            "notes": ""
+          },
+          {
+            "task_id": "t2",
+            "task_type": "implementation",
+            "complexity": "moderate",
+            "start_time": "2025-11-11T21:36:48.706021",
+            "end_time": "2025-11-11T21:36:48.706021",
+            "status": "completed",
+            "affinity_score": 1.0,
+            "notes": ""
+          }
+        ],
+        "completed_tasks": 2,
+        "failed_tasks": 0,
+        "total_execution_time_ms": 0.0,
+        "task_type_preferences": {
+          "implementation": 1.0,
+          "testing": 0.85,
+          "review": 0.7,
+          "planning": 0.65,
+          "architecture": 0.5,
+          "design": 0.55,
+          "analysis": 0.6,
+          "creative": 0.35
+        },
+        "preferred_agents_to_collaborate_with": []
+      },
+      "personality": {
+        "name": "Cato",
+        "role": "executor",
+        "traits": [
+          "Action-oriented",
+          "Pragmatic",
+          "Reliable",
+          "Detail-focused",
+          "Efficient",
+          "Results-driven"
+        ]
+      }
+    }
+  },
+  "context": {
+    "session_id": "c049748d",
+    "topic": "Lifecycle Test",
+    "problem_statement": "Test lifecycle",
+    "ideas": {
+      "b46bd52d": {
+        "content": "Systematic approach to Lifecycle Test",
+        "contributor": "Athena",
+        "category": "approach"
+      },
+      "d99f641d": {
+        "content": "Practical implementation for Lifecycle Test",
+        "contributor": "Cato",
+        "category": "detail"
+      },
+      "c2327413": {
+        "content": "T1: Completed by Cato",
+        "contributor": "Cato",
+        "category": "synthesis"
+      },
+      "0aeb67f3": {
+        "content": "T2: Completed by Cato",
+        "contributor": "Cato",
+        "category": "synthesis"
+      },
+      "45ea422e": {
+        "content": "Integrated solution for Lifecycle Test",
+        "contributor": "System",
+        "category": "synthesis"
+      }
+    }
+  },
+  "brainstorm_session": {
+    "session_id": "3a7fa7f7",
+    "total_turns": 2
+  },
+  "synthesis_session": {
+    "session_id": "b6c6519f",
+    "synthesis_count": 1
+  },
+  "evaluation_session": {
+    "session_id": "15a32f86",
+    "evaluation_count": 1
+  },
+  "metrics": {
+    "workflow_id": "lifecycle_test",
+    "total_time_ms": 0.0,
+    "tasks_completed": 2,
+    "final_phase": "complete",
+    "brainstorm_results": {
+      "ideas_generated": 2,
+      "total_ideas": 2,
+      "total_turns": 2,
+      "participants": [
+        "Athena",
+        "Cato"
+      ],
+      "turns": [
+        1,
+        2
+      ]
+    },
+    "execution_results": {
+      "tasks_completed": 2,
+      "tasks_failed": 0,
+      "task_assignments": {
+        "t1": "Cato",
+        "t2": "Cato"
+      },
+      "agent_assignments": {
+        "Cato": 2
+      },
+      "affinity_scores": {
+        "t1": {
+          "Athena": 0.35277777777777786,
+          "Cato": 1.0
+        },
+        "t2": {
+          "Athena": 0.35277777777777786,
+          "Cato": 1.0
+        }
+      },
+      "execution_order": [
+        "t1",
+        "t2"
+      ],
+      "total_time_ms": 0.0
+    },
+    "synthesis_results": {
+      "synthesis_id": "e213f052",
+      "source_count": 2,
+      "coherence": 0.85,
+      "synthesis_count": 1
+    },
+    "evaluation_results": {
+      "idea_id": "lifecycle_test",
+      "evaluation_count": 2,
+      "average_quality": 1.0,
+      "average_novelty": 0.7,
+      "average_feasibility": 0.85,
+      "average_impact": 0.75,
+      "evaluators": [
+        "Athena",
+        "Cato"
+      ]
+    },
+    "memory_results": {
+      "memory_stored": true
+    },
+    "phases_completed": 5
+  },
+  "created_at": "2025-11-11T21:36:48.696017",
+  "completed_at": "2025-11-11T21:36:48.706021",
+  "_metadata": {
+    "saved_at": "2025-11-11T21:36:48.716019",
+    "version": "1.0",
+    "tags": [
+      "lifecycle"
+    ],
+    "filename": "lifecycle_test.json"
+  }
+}
