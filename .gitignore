@@ -1,3 +1,10 @@
 _bmad-output/
 *.tmp
 .DS_Store
+node_modules/
+.env
+.env.*
+*.log
+dist/
+build/
+coverage/
